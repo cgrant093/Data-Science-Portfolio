@@ -34,7 +34,7 @@ There is a single respository, [Valorant Data Project](https://github.com/cgrant
 
 
 ### Machine Learning 
-There are two (or three) generic types of machine learning algorithms which are supervised and unsupervised (and reinforced).
+There are three generic types of machine learning algorithms which are supervised, unsupervised, and reinforced.
 
 #### Supervised Learning
 Supervised machine learning is when the training data has inputs associated with known, labeled outputs (or target values). After training is complete, the algorithm will then predict the outputs for unlabeled input values. These problems can be divided up into two subcategories: regression and classification. Regression algorithms are used for finding a relationship between the independent variable(s) and the dependent variable, and the output of these is continuous. The output for classification models is discrete, and it is trying to group data based on two or more groups found in the training data.
@@ -45,12 +45,12 @@ For notable projects using supervised machine learning algorithms in python, ple
    * Simple_NN uses numpy to create a handwritten digit reader. This was my first ML and python project back in 2017
    * Handwrote_Word_Reader uses PyTorch to create a handwritten word reader utilizing CNNs, bidirectional LSTM RNNs, and a CTC
 
-In this repository in the [Machine Learning](https://github.com/cgrant093/Data-Science-Portfolio/tree/main/Python/Machine%20Learning) folder:
+In this repository, in the Python/[Machine Learning](https://github.com/cgrant093/Data-Science-Portfolio/tree/main/Python/Machine%20Learning) subfolder:
 * regression_models: compares simple sklearn regression ML models on a randomly generated dataset
 * classification_models: compares simple sklearn classification model on a randomly generated dataset
 * midi_composer_classifier: trying to classify midi data to a known set of composers and there are three files that do not belong to our known list of composers.
 
-I also have a [published paper]((https://inspirehep.net/literature/1771848) from my physics PhD research, which utilizes neural networks as a non-linear regression model.
+I also have a [published paper](https://inspirehep.net/literature/1771848) from my physics PhD research, which utilizes neural networks (numpy) as a non-linear regression model. This paper also utilizes a Monte Carlo algorithm to generate our pseudo-data from experimental measurements.
 
 #### Unsupervised Learning
 Unsupervised machine learning is when there are no known output values. Two main concepts are clustering and dimensionality reduction. Clustering is similar to classification, but will group the data itself. Dimesionality reduction is simply to reduce the number of features in the data set, which can be due to one feature being dependent on one or more other features, or the feature doesn't change across inputs and could be seen as 'unhelpful'. 
