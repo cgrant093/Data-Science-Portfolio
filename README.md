@@ -1,20 +1,12 @@
 # Data-Science-Portfolio
-Brief overview of my skills in data science and software development. 
+Brief overview of my knowledge and skills that are useful in data science and software development. 
 
 Skills and projects are separated by language. Python being the most in-depth due to a combination of experience and relevance:
 1. Python
     * Machine Learning (sklearn, numpy, PyTorch)
-        * Supervised
-            * Regression: Linear Regression, Decision Trees, Random Forests, Neural Networks
-            * Classification: Logisitic Regression, Support Vector Machines, K-Nearest Neighbors, Decision Trees, Random Forests, Neural Networks
-            * Deep Learning: Simple NNs, CNNs, RNN
-        * Unsupervised
-            * Clustering: K-means, Heirarchical, Mean shift, Density-based
-            * Dimensionality Reduction: Principal Component Analysis (feature elimination and extraction)
-    * Statistics (numpy, pandas, scipy)
-        * Hypothesis Testing: t-test, ANOVA, Chi-Squared
-        * Other topics: distributions, moments
-    * Webscraping (requests, beautifulSoup)
+    * Statistical Tests (numpy, pandas, scipy, statsmodels)
+    * Pandas DataFrame manipulation (pandas)
+    * Webscraping (requests)
     * Unit Testing (pytest)
     * GUIs (pyqt5)
 2. SQL
@@ -30,7 +22,7 @@ Skills and projects are separated by language. Python being the most in-depth du
 ## Python
 Python was self-taught along side simple neural network developement in 2017. My development experience with Python is predominately my personal projects and one of my research projects during my PhD, some of which can be found in this and other repositories found on my Github.
 
-There is a single respository, [Valorant Data Project](https://github.com/cgrant093/Valorant-Data-Project), that covers many of my skills in python: webscraping with requests, organizing/cleaning data in pandas dataframes, aggregating and graphing data, feature selection for supervised model training. The future improvements will involve some combination of the following: classical or deep learning model training, hypothesis testing, and unit testing. A more detailed description can be found in its [repository](https://github.com/cgrant093/Valorant-Data-Project).
+One of my respositories, [Valorant Data Project](https://github.com/cgrant093/Valorant-Data-Project), covers many of my skills in python: webscraping with requests, organizing/cleaning data in pandas dataframes, aggregating and graphing data, and feature selection for supervised model training. The future developments will involve some combination of the following: classical or deep learning model training, hypothesis testing (ANOVA), and unit testing. A more detailed description can be found [here](https://github.com/cgrant093/Valorant-Data-Project).
 
 
 ### Machine Learning 
@@ -50,7 +42,7 @@ In this repository, in the Python/[Machine Learning](https://github.com/cgrant09
 * classification_models: compares simple sklearn classification model on a randomly generated dataset
 * midi_composer_classifier: trying to classify midi data to a known set of composers and there are three files that do not belong to our known list of composers.
 
-I also have a [published paper](https://inspirehep.net/literature/1771848) from my physics PhD research, which utilizes neural networks (numpy) as a non-linear regression model. This paper also utilizes a Monte Carlo algorithm to generate our pseudo-data from experimental measurements.
+I also have a [published paper](https://inspirehep.net/literature/1771848) from one of my PhD research projects. It utilizes neural networks (numpy) as unbiased, non-linear regressors. This project also generates the (training) pseudo-data from experimental measurements using a Monte Carlo algorithm.
 
 #### Unsupervised Learning
 Unsupervised machine learning is when there are no known output values. Two main concepts are clustering and dimensionality reduction. Clustering is similar to classification, but will group the data itself. Dimesionality reduction is simply to reduce the number of features in the data set, which can be due to one feature being dependent on one or more other features, or the feature doesn't change across inputs and could be seen as 'unhelpful'. 
@@ -59,21 +51,15 @@ Common clustering algorithms are: K-means, Heirarchical, Mean shift, and Density
 
 Principal Component Analysis (PCA) is very popular for dimesionality reduction.
 
-
 #### Reinforced Learning
 Similar to unsupervised learning in that there are not input/output pairs, but there is a reward system in place. This reward system tells the algorithm how 'good' this set of parameters is. This type of machine learning is primarily used for computer played video games, or running simulations of evolution. Usually, in one epoch or generation, there are multiple, slightly different, sets of parameters. The best one is found via the reward system, and that one has its parameters updated with some set of small deviations, and then all of those are ran for the next generation. This process is iterated until the desired outcome is reached.
 
 
-### Statistics
+### Statistical tests
+In the Python/[Statistical Methods](https://github.com/cgrant093/Data-Science-Portfolio/tree/main/Python/Statistical%20Methods) subfolder, the file [hypothesis_testing](https://github.com/cgrant093/Data-Science-Portfolio/blob/main/Python/Statistical%20Methods/hypothesis_testing.ipynb) uses a few different versions of t-tests, ANOVA tests, and chi-squared tests on a dataFrame I created. The file used to create the fake dataFrame and the csv file is located in the same subfolder.
 
-Mean, median, mode, range, IQR, moments, common distributions
 
-#### Hypothesis testing
-
-##### t-test
-##### ANOVA
-##### Chi-squared
-
+### Pandas DataFrame manipulation
 ### Webscraping
 ### Unit testing
 ### GUIs
@@ -98,7 +84,7 @@ Mean, median, mode, range, IQR, moments, common distributions
 
 ## Mathematica
 
-
+My work with Mathematica exclusively involves 
 
 ## Other Skills/Languages:
 
