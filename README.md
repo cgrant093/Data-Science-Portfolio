@@ -9,6 +9,7 @@ Skills and projects are separated by language. Python being the most in-depth du
     * Webscraping (requests)
     * Unit Testing (pytest)
     * GUIs (pyqt5)
+    * Quantum Computing and QML (Pennylane)
 2. SQL
 3. LaTeX
 4. Java
@@ -63,6 +64,7 @@ In the Python/[Statistical Methods](https://github.com/cgrant093/Data-Science-Po
 ### Webscraping
 ### Unit testing
 ### GUIs
+### Quantum Computing and QML
 
 
 
@@ -96,10 +98,7 @@ The final project, which I collaborated with 2 other students, can be found in t
 
 A large majority of my grad school research was performed using Mathematica.
 
-## Other Skills/Languages:
 
-
-### MATLAB, Excel, AWS, Quantum Machine Learning, Command Prompt
 
 
 
