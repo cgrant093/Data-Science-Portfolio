@@ -10,7 +10,7 @@ Skills and projects are separated by language. Python being the most in-depth du
     * Unit Testing (pytest)
     * GUIs (pyqt5)
 2. SQL
-3. Latex
+3. LaTeX
 4. Java
 5. C++
 6. Mathematica
@@ -70,21 +70,31 @@ In the Python/[Statistical Methods](https://github.com/cgrant093/Data-Science-Po
 
 
 
-## Latex
+## LaTeX
+I have been using LaTeX during my entire grad school career. I have become very fluent in this 'language'.
 
+I have helped write several research papers, whch can be found in my resume. Much of my grad school homework was written in LaTex; as well as, my dissertation and its defense slides, and my resume were all constructed using it. As well as any supplimentary PDFs found in the other folders. I have added my LaTex code for my resume and defense in the LaTeX folder. 
 
 
 ## Java
+I primarily used Java in undergrad, specifically in classes CS101 and CS102, and it was the main language used for my undergraduate thesis.
 
+My undergrad thesis has been added to the Java/[Undergrad_Thesis](https://github.com/cgrant093/Data-Science-Portfolio/tree/main/Java/Undergrad_Thesis) subfolder. The readme in this folder goes into detail, but I beg forgiveness from whomever looks at this code. It was early in my coding career and the inexperience shows.
+
+Sadly, the main project from CS102 seems to be lost to the sands of having to reinstall Windows too many times on my old laptops. There were 5 main projects for this class and all of them were a calendar application. Each time, the requirements for the application would become more complex, or we needed to switch data structure types. The last version being that we added a GUI instead of the user interacting with the program via command prompt. I was very proud of this project, and am sad to see it's lost. It was the first project were the whole coding process finally clicked.
 
 
 ## C++
+My main experience with C++ comes from a class I took my first year of grad school, Computers in High Energy Physics, or something along those lines. The class started as if you didn't know and C++ and then quickly moved along to applications. I felt I was quick to learn C++ with my previous Java experience. This concept I've felt has been more true every language I pick up because it is more or less a difference in syntax, but I digress. 
 
+The Cpp/[6860](https://github.com/cgrant093/Data-Science-Portfolio/tree/main/Cpp/6860) subfolder holds the small projects and coding notes taken for this class. The class also went into learning some terminal commands.
+
+The final project, which I collaborated with 2 other students, can be found in this shared [repository](https://github.com/imooney/relativistic-resonance-decays).
 
 
 ## Mathematica
 
-My work with Mathematica exclusively involves 
+A large majority of my grad school research was performed using Mathematica.
 
 ## Other Skills/Languages:
 
