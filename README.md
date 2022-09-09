@@ -1,5 +1,5 @@
-# Data-Science-Portfolio
-Brief overview of my knowledge and skills that are useful in data science and software development. 
+# Skills-Portfolio
+Brief overview of my knowledge and skills that are useful in data science, software development, and similar fields. 
 
 Skills and projects are separated by language. Python being the most in-depth due to a combination of experience and relevance:
 1. Python
@@ -83,7 +83,7 @@ I primarily used Java in undergrad, specifically in classes CS101 and CS102, and
 
 My undergrad thesis has been added to the Java/[Undergrad_Thesis](https://github.com/cgrant093/Data-Science-Portfolio/tree/main/Java/Undergrad_Thesis) subfolder. The readme in this folder goes into detail, but I beg forgiveness from whomever looks at this code. It was early in my coding career and the inexperience shows.
 
-Sadly, the main project from CS102 seems to be lost to the sands of having to reinstall Windows too many times on my old laptops. There were 5 main projects for this class and all of them were a calendar application. Each time, the requirements for the application would become more complex, or we needed to switch data structure types. The last version being that we added a GUI instead of the user interacting with the program via command prompt. I was very proud of this project, and am sad to see it's lost. It was the first project were the whole coding process finally clicked.
+The other project is a the final project I did for CS-102 back in 2016. There were 5 main projects for this class and all of them were a calendar application. Each time, the requirements for the application would become more strict/complex or change. The main addition for this final version was adding a GUI using JFrame as opposed to the user inferfacing with the command prompt. It was the first project were the whole coding process finally clicked for me.
 
 
 ## C++
