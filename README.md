@@ -1,5 +1,5 @@
-# Data-Science-Portfolio
-Brief overview of my knowledge and skills that are useful in data science and software development. 
+# Skills-Portfolio
+Brief overview of my knowledge and skills that are useful in data science, software development, and similar fields. 
 
 Skills and projects are separated by language. Python being the most in-depth due to a combination of experience and relevance:
 1. Python
