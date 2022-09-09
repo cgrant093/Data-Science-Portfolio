@@ -27,11 +27,6 @@ One of my respositories, [Valorant Data Project](https://github.com/cgrant093/Va
 
 
 ### Machine Learning 
-There are three generic types of machine learning algorithms which are supervised, unsupervised, and reinforced.
-
-#### Supervised Learning
-Supervised machine learning is when the training data has inputs associated with known, labeled outputs (or target values). After training is complete, the algorithm will then predict the outputs for unlabeled input values. These problems can be divided up into two subcategories: regression and classification. Regression algorithms are used for finding a relationship between the independent variable(s) and the dependent variable, and the output of these is continuous. The output for classification models is discrete, and it is trying to group data based on two or more groups found in the training data.
-
 For notable projects using supervised machine learning algorithms in python, please check the following repositories:
 * [Valorant Data Project](https://github.com/cgrant093/Valorant-Data-Project): classification_models.ipynb is studying which sklearn classification model is best for the specific features selected
 * [Handwritten Recognition](https://github.com/cgrant093/Handwritten-Recognition): has two projects of note, 
@@ -43,17 +38,7 @@ In this repository, in the Python/[Machine Learning](https://github.com/cgrant09
 * classification_models: compares simple sklearn classification model on a randomly generated dataset
 * midi_composer_classifier: trying to classify midi data to a known set of composers and there are three files that do not belong to our known list of composers.
 
-I also have a [published paper](https://inspirehep.net/literature/1771848) from one of my PhD research projects. It utilizes neural networks (numpy) as unbiased, non-linear regressors. This project also generates the (training) pseudo-data from experimental measurements using a Monte Carlo algorithm.
-
-#### Unsupervised Learning
-Unsupervised machine learning is when there are no known output values. Two main concepts are clustering and dimensionality reduction. Clustering is similar to classification, but will group the data itself. Dimesionality reduction is simply to reduce the number of features in the data set, which can be due to one feature being dependent on one or more other features, or the feature doesn't change across inputs and could be seen as 'unhelpful'. 
-
-Common clustering algorithms are: K-means, Heirarchical, Mean shift, and Density-based. 
-
-Principal Component Analysis (PCA) is very popular for dimesionality reduction.
-
-#### Reinforced Learning
-Similar to unsupervised learning in that there are not input/output pairs, but there is a reward system in place. This reward system tells the algorithm how 'good' this set of parameters is. This type of machine learning is primarily used for computer played video games, or running simulations of evolution. Usually, in one epoch or generation, there are multiple, slightly different, sets of parameters. The best one is found via the reward system, and that one has its parameters updated with some set of small deviations, and then all of those are ran for the next generation. This process is iterated until the desired outcome is reached.
+I also have a [published paper](https://inspirehep.net/literature/1771848) from one of my PhD research projects. It utilizes neural networks (utilizing mostly numpy) as unbiased, non-linear regressors. This project also generates the (training) pseudo-data from experimental measurements using a Monte Carlo algorithm.
 
 
 ### Statistical tests
@@ -96,7 +81,7 @@ The final project, which I collaborated with 2 other students, can be found in t
 
 ## Mathematica
 
-A large majority of my grad school research was performed using Mathematica.
+A large majority of my grad school research was performed using Mathematica. Some of these files can be found in the Mathematica subfolder. Start to finish, they can probably show a large developement in my coding skills as this was the primary language I used during my grad school. These were also the years where I felt my coding skills become greatly refined from what they were in undergrad.
 
 
 
