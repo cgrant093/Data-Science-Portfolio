@@ -1,8 +1,8 @@
 # SQL Exercises
 Utilizing the sample database 'dvdrental' in pgAdmin4 with postgreSQL 14
 
-1. Identify the top 10 customers and their email so we can reward them
-'''
+### 1. Identify the top 10 customers and their email so we can reward them
+```
 SELECT first_name, last_name, email,
 		SUM(amount) AS total_amount_spent
 FROM customer AS c
@@ -11,7 +11,7 @@ INNER JOIN payment AS p
 GROUP BY first_name, last_name, email
 ORDER BY total_amount_spent DESC
 LIMIT 10;
-'''
+```
 
 Output:
 "first_name"|	"last_name"	|"email"	|"total_amount_spent"
@@ -28,8 +28,8 @@ Output:
 "Mike"|	"Way"|	"mike.way@sakilacustomer.org"	|162.67
 
 
-2. Identify the bottom 10 customers and their emails
-'''
+### 2. Identify the bottom 10 customers and their emails
+```
 SELECT first_name, last_name, email,
 		SUM(amount) AS total_amount_spent
 FROM customer AS c
@@ -38,7 +38,7 @@ INNER JOIN payment AS p
 GROUP BY first_name, last_name, email
 ORDER BY total_amount_spent ASC
 LIMIT 10;
-'''
+```
 
 Output:
 "first_name"|	"last_name"	|"email"	|"total_amount_spent"
@@ -55,8 +55,8 @@ Output:
 "Johnny"|	"Turpin"	|"johnny.turpin@sakilacustomer.org"	|57.81
 
 
-3. What are the most profitable movie genres (ratings)? 
-'''
+### 3. What are the most profitable movie genres (ratings)? 
+```
 SELECT name AS genre,
 		COUNT(i.inventory_id) AS total_demand,
 		SUM(amount) AS total_sales
@@ -73,7 +73,7 @@ INNER JOIN payment as p
 	ON p.customer_id = r.customer_id
 GROUP BY genre
 ORDER BY total_sales DESC;
-'''
+```
 
 Output:
 "genre"	|"total_demand"	|"total_sales"
@@ -96,25 +96,128 @@ Output:
 "Music"	|20761	|87185.39
 
 
-4. How many rented movies were returned late, early, and on time?
-'''
+### 4. How many rented movies were returned late, early, and on time?
+```
+SELECT 
+	CASE WHEN rental_duration > 
+		DATE_PART('day', (return_date - rental_date)) 
+			THEN 'early'
+		WHEN rental_duration = 
+			DATE_PART('day', (return_date - rental_date))
+			THEN 'on-time'
+		ELSE 'late'
+		END AS return_status,
+	COUNT (*) AS total_number_of_films
+FROM film AS f
+INNER JOIN inventory AS i
+	ON i.film_id = f.film_id
+INNER JOIN rental AS r
+	ON r.inventory_id = i.inventory_id
+GROUP BY return_status
+ORDER BY total_number_of_films DESC;
+```
 
-'''
+Output:
+"return_status"	|"total_number_of_films"
+:---: | :---:
+"early"|	7738
+"late"	|6586
+"on-time"|	1720
 
 
-5. What is the customer base in the countries where we have a presence?
-'''
+### 5. What is the customer base in the countries where we have a presence?
+```
+SELECT country, 
+	COUNT(customer_id) AS customer_base
+FROM country AS c
+INNER JOIN city AS t
+	ON t.country_id = c.country_id
+INNER JOIN address AS a
+	ON a.city_id = t.city_id
+INNER JOIN customer AS q
+	ON q.address_id = a.address_id
+GROUP BY country
+ORDER BY customer_base DESC
+LIMIT 10;
+```
 
-'''
+Output:
+"country"	|"customer_base"
+:---: | :---:
+"India"|	60
+"China"|	53
+"United States"|	36
+"Japan"|31
+"Mexico"	|30
+"Brazil"	|28
+"Russian Federation"	|28
+"Philippines"	|20
+"Turkey"	|15
+"Indonesia"|	14
 
 
-6. Which country is the most profitable for the business?
-'''
+### 6. Which country is the most profitable for the business?
+```
+SELECT country, 
+	SUM(amount) AS total_sales
+FROM country AS c
+INNER JOIN city AS t
+	ON t.country_id = c.country_id
+INNER JOIN address AS a
+	ON a.city_id = t.city_id
+INNER JOIN customer AS q
+	ON q.address_id = a.address_id
+INNER JOIN payment AS p
+	ON p.customer_id = q.customer_id
+GROUP BY country
+ORDER BY total_sales DESC
+LIMIT 10;
+```
 
-'''
+Output:
+"country"|	"total_sales"
+:---: | :---:
+"India"|	6034.78
+"China"	|5251.03
+"United States"|	3685.31
+"Japan"|	3122.51
+"Mexico"|	2984.82
+"Brazil"	|2919.19
+"Russian Federation"	|2765.62
+"Philippines"|	2219.70
+"Turkey"	|1498.49
+"Indonesia"	|1352.69
 
 
-7. What is the average rental rate per movie genre (rating)?
-'''
+### 7. What is the average rental rate per movie genre (rating)?
+```
+SELECT c.name AS genre, 
+	AVG(f.rental_rate) AS avg_rental_rate
+FROM film AS f
+INNER JOIN film_category AS fc
+	ON fc.film_id = f.film_id
+INNER JOIN category AS c
+	ON c.category_id = fc.category_id
+GROUP BY genre
+ORDER BY avg_rental_rate DESC;
+```
 
-'''
+Output:
+"genre"|	"avg_rental_rate"
+:---: | :---:
+"Games"	|3.2522950819672131
+"Travel"|	3.2356140350877193
+"Sci-Fi"|	3.2195081967213115
+"Comedy"|	3.1624137931034483
+"Sports"|	3.1251351351351351
+"New"	|3.1169841269841270
+"Foreign"|	3.0995890410958904
+"Horror"|	3.0257142857142857
+"Drama"	|3.0222580645161290
+"Music"	|2.9507843137254902
+"Children"|	2.8900000000000000
+"Animation"|	2.8081818181818182
+"Family"	|2.7581159420289855
+"Classics"|	2.7443859649122807
+"Documentary"|	2.6664705882352941
+"Action"	|2.6462500000000000
